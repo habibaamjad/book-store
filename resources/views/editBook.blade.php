@@ -9,11 +9,11 @@
 </head>
 <body>
 
-<div class="container-fluid p-5 bg-primary text-white text-center">
+<div class="container-fluid p-5 bg-secondary text-white text-center">
   <h1>Edit Book</h1>
   <p>Resize this responsive page to see the effect!</p> 
   <a href="{{route('home')}}">
-    <button class="btn btn-secondary">All Books</button>
+    <button class="btn btn-dark">All Books</button>
     </a>
 </div>
 
