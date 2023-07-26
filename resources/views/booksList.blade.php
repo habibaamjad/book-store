@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Example</title>
+  <title>Book Store</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 <div class="container-fluid p-5 bg-secondary text-white text-center">
   <h1>Welcome to the Book Store</h1>
-  <!-- <p>Resize this responsive page to see the effect!</p>  -->
+  <p>Find any book of your choice!</p>
   <a href="{{route('createBook')}}">
     <button class="btn btn-dark">Create Book</button>
     </a>

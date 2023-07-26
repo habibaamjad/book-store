@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\BookController;
 |
 */
 
-
+Auth::routes();
 
 Route::get("/", [BookController::class, "getBook"])->name("home");
 
@@ -38,3 +39,7 @@ Route::put("book-update/{id}", [BookController::class, "updateBook"])->name("upd
 //     return "Employee Name: " . $name . " Age is : " . $age;
 // });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
