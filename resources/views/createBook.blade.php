@@ -9,16 +9,16 @@
 </head>
 <body>
 
-<div class="container-fluid p-5 bg-secondary text-white text-center">
+<div class="container-fluid p-5 bg-primary text-white text-center">
   <h1>Book Store</h1>
   <p>Resize this responsive page to see the effect!</p> 
-  <a href="{{route('home')}}">
-    <button class="btn btn-dark">All Books</button>
+  <a href="{{url('get-book')}}">
+    <button class="btn btn-light">All Books</button>
     </a>
 </div>
 
 <div class="container mb-5 ">
-<form action="{{route('storeBook')}}" method="POST">
+<form action="{{route('storeBook')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="mb-3 mt-3">
     <label for="title" class="form-label">Title:</label>
@@ -48,7 +48,13 @@
     <div class="text-danger">{{$message}}</div>
     @enderror
   </div>
- 
+  <div class="mb-3">
+    <label for="image" class="form-label">Image:</label>
+    <input type="file" class="form-control" id="image" placeholder="Enter author" name="image">
+    @error("image")
+    <div class="text-danger">{{$message}}</div>
+    @enderror
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
